@@ -12,7 +12,7 @@ WARNING:
     All data in the database will be permanently deleted. Proceed with caution 
     and ensure you have proper backups before running this script.
 */
-/*
+
 USE master;
 GO
 
@@ -24,7 +24,7 @@ BEGIN
     DROP DATABASE DataWarehouse;
 END;
 GO
-*/
+
 -- Create the 'DataWarehouse' database
 
 CREATE DATABASE [DataWarehouse]
