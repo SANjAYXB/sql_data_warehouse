@@ -29,34 +29,39 @@ GO
 
 CREATE DATABASE [DataWarehouse]
  CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'DataWarehouse', 
-  FILENAME = N'X:\PDATAXT22INS\DataWarehouse.mdf' , 
+  ON  PRIMARY 
+( NAME = N'PRIM_DataWarehouse', 
+  FILENAME = N'X:\PDATAXT11INS\PRIM_DataWarehouse.mdf' , 
   SIZE = 8192KB , 
+  MAXSIZE = 84MB, 
   FILEGROWTH = 65536KB ), 
 
  FILEGROUP [bronze] 
 ( NAME = N'bronze', 
-  FILENAME = N'X:\SDATAXT22INS\bronze.ndf' , 
+  FILENAME = N'X:\SDATAXT11INS\bronze.ndf' , 
   SIZE = 8192KB , 
+  MAXSIZE = 84MB, 
   FILEGROWTH = 65536KB ), 
 
  FILEGROUP [gold] 
 ( NAME = N'gold', 
-  FILENAME = N'X:\SDATAXT22INS\gold.ndf' , 
+  FILENAME = N'X:\SDATAXT11INS\gold.ndf' , 
   SIZE = 8192KB , 
+  MAXSIZE = 84MB, 
   FILEGROWTH = 65536KB ), 
 
  FILEGROUP [silver] 
 ( NAME = N'silver', 
-  FILENAME = N'X:\SDATAXT22INS\silver.ndf' , 
+  FILENAME = N'X:\SDATAXT11INS\silver.ndf' , 
   SIZE = 8192KB , 
+  MAXSIZE = 84MB, 
   FILEGROWTH = 65536KB )
 
  LOG ON 
 ( NAME = N'DataWarehouse_log', 
-  FILENAME = N'X:\LOGXT22INS\DataWarehouse_log.ldf' , 
+  FILENAME = N'X:\LOGXT11INS\DataWarehouse_log.ldf' , 
   SIZE = 8192KB , 
+  MAXSIZE = 84MB, 
   FILEGROWTH = 65536KB )
  
 GO
@@ -70,8 +75,7 @@ CREATE SCHEMA bronze;
 GO
 
 CREATE SCHEMA silver;
+GO
 
 CREATE SCHEMA gold;
 GO
-
-
